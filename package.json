@@ -1,0 +1,17 @@
+{
+  "name": "occ",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Neil mastroianni",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "yarn tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "yarn tailwindcss -i ./src/input.css -o ./dist/output.css --minify && node build.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "tailwindcss": "^3.2.7"
+  }
+}
