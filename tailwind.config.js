@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*{.css,.html}'],
+  content: ["./src/**/*{.css,.html}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkblue: "rgb(0, 55, 103)",
+        sand: "rgb(234, 230, 222)",
+        darksand: "rgb(235, 217, 173)",
+      },
+    },
   },
-  plugins: [require('prettier-plugin-tailwindcss')],
-}
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [
+    require("prettier-plugin-tailwindcss"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
+};
